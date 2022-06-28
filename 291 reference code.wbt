@@ -1,0 +1,198 @@
+#VRML_SIM R2022a utf8
+WorldInfo {
+}
+Viewpoint {
+  orientation -0.27913790544748934 0.32832582370586233 0.9023769629319309 1.5112539319973641
+  position -0.7859713250664953 -5.6017597106682295 4.8032995454443235
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+  floorSize 6 3
+  floorAppearance OsbWood {
+  }
+}
+WoodenBox {
+  translation 1.5 -0.4 0.3
+}
+UR5e {
+  translation 1.5 -0.4 0.6
+  controller "291_reference_code"
+  toolSlot [
+    Robotiq3fGripper {
+    }
+    DistanceSensor {
+      translation 0 0.095 0.04
+      rotation 0 0 1 1.5707996938995747
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 1 0 0
+            roughness 1
+            metalness 0
+          }
+          geometry Box {
+            size 0.01 0.01 0.01
+          }
+        }
+      ]
+    }
+    Transform {
+      translation 0 0.092 -0.04
+      rotation 0 1 0 3.14
+      children [
+        Camera {
+          rotation 0 0 1 1.5707996938995747
+          children [
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0 1 0
+                roughness 1
+                metalness 0
+              }
+              geometry Box {
+                size 0.01 0.01 0.01
+              }
+            }
+          ]
+          width 400
+          height 400
+          recognition Recognition {
+            maxRange 0.5
+          }
+        }
+      ]
+    }
+  ]
+}
+ConveyorBelt {
+  translation 0 0.4 0
+  size 5 0.5 0.5
+  speed 0.1
+}
+Solid {
+  translation -2 0.4 0.55
+  children [
+    DEF BOX Shape {
+      appearance RustyMetal {
+      }
+      geometry Box {
+        size 0.1 0.1 0.1
+      }
+    }
+  ]
+  name "red solid 1"
+  boundingObject USE BOX
+  physics Physics {
+  }
+  recognitionColors [
+    1 0 0
+  ]
+}
+Solid {
+  translation -1 0.4 0.55
+  children [
+    DEF BOX Shape {
+      appearance RustyMetal {
+      }
+      geometry Box {
+        size 0.1 0.1 0.1
+      }
+    }
+  ]
+  name "red solid 1(1)"
+  boundingObject USE BOX
+  physics Physics {
+  }
+  recognitionColors [
+    1 0 0
+  ]
+}
+Solid {
+  translation -0.5 0.4 0.55
+  children [
+    DEF BOX Shape {
+      appearance RustyMetal {
+      }
+      geometry Box {
+        size 0.1 0.1 0.1
+      }
+    }
+  ]
+  name "red solid 1(2)"
+  boundingObject USE BOX
+  physics Physics {
+  }
+  recognitionColors [
+    1 0 0
+  ]
+}
+Solid {
+  translation -1.5 0.4 0.55
+  children [
+    DEF BOX Shape {
+      appearance GalvanizedMetal {
+      }
+      geometry Box {
+        size 0.1 0.1 0.1
+      }
+    }
+  ]
+  name "green solid 1"
+  boundingObject USE BOX
+  physics Physics {
+  }
+  recognitionColors [
+    0 1 0
+  ]
+}
+Solid {
+  translation 0 0.4 0.55
+  children [
+    DEF BOX Shape {
+      appearance GalvanizedMetal {
+      }
+      geometry Box {
+        size 0.1 0.1 0.1
+      }
+    }
+  ]
+  name "green solid 1(1)"
+  boundingObject USE BOX
+  physics Physics {
+  }
+  recognitionColors [
+    0 1 0
+  ]
+}
+Solid {
+  translation 0.5 0.4 0.55
+  children [
+    DEF BOX Shape {
+      appearance GalvanizedMetal {
+      }
+      geometry Box {
+        size 0.1 0.1 0.1
+      }
+    }
+  ]
+  name "green solid 1(2)"
+  boundingObject USE BOX
+  physics Physics {
+  }
+  recognitionColors [
+    0 1 0
+  ]
+}
+MetalStorageBox {
+  name "red storage box"
+  translation 2.4 -0.2 0
+  rotation 0 0 1 1.57
+}
+MetalStorageBox {
+  name "green storage box"
+  translation 2.4 -0.9 0
+  rotation 0 0 1 1.57
+}
